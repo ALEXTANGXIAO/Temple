@@ -9,8 +9,11 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Off Canvas Template for Bootstrap</title>
+    <title>TempleData For 刘慧莹</title>
 
+    <!--无法下拉滚动加这个-->
+    <script src="JQ.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -20,17 +23,12 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="offcanvas.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+  
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -49,7 +47,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">我的小肥猪</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -67,11 +65,46 @@
 
         <div class="col-xs-12 col-sm-9">
           <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">日期</button>
           </p>
           <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+            <h1>刘慧莹，我超喜欢你</h1>
+            <p>This is an example from Tangxiao To his small pig LiuHuiYing.
+               
+            </p>
+          </div>
+
+          <div class="jumbotron">
+
+            <h1>听歌吧</h1>
+            <div class="tool">
+                <form>
+                    search:
+                    <input type="text" maxlength="20" name="输入" style="width:70%;">&nbsp;
+                    <input type="button" value="搜索" onclick="search()" style="width: 10%;">&nbsp;
+                    <!-- <span id="search_id">result</span><br> -->
+                    type:
+                    <select name="type">
+                        <option value="song" selected="selected">单曲</option>
+                        <option value="lyric">歌词</option>
+                        <option value="mv">MV</option>
+                    </select>&nbsp;
+                    id:
+                    <input type="text" maxlength="10" name="id" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" style="width:120px;">&nbsp;
+                    br:
+                    <select name="br">
+                        <option value="128000" >128000</option>
+                        <option value="198000">198000</option>
+                        <option value="320000" selected="selected">320000</option>
+                    </select>&nbsp;
+                    <input type="button" value="预览" onclick="get('view')">
+                    <input type="button" value="下载" onclick="get('download')">
+                </form>
+                <p>
+                    <input type="text" name="code" style="width:80%;max-width:500px;">
+                </p>
+            </div>
+
           </div>
           <div class="row">
             <div class="col-xs-6 col-lg-4">
@@ -109,7 +142,7 @@
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
           <div class="list-group">
-            <a href="#" class="list-group-item active">Link</a>
+            <a href="#" class="list-group-item active">一月份的爱你</a>
             <a href="#" class="list-group-item">Link</a>
             <a href="#" class="list-group-item">Link</a>
             <a href="#" class="list-group-item">Link</a>
@@ -118,7 +151,7 @@
             <a href="#" class="list-group-item">Link</a>
             <a href="#" class="list-group-item">Link</a>
             <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">一月份的爱你</a>
           </div>
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
@@ -126,7 +159,7 @@
       <hr>
 
       <footer>
-        <p>&copy; 2016 Company, Inc.</p>
+        <p>&copy; 2020 Company, Inc.</p>
       </footer>
 
     </div><!--/.container-->
@@ -141,5 +174,230 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="offcanvas.js"></script>
+
+    <script>
+     function search(){
+        document.getElementById("search_id").innerHTML = "";
+        var _song = "type=search" +"&s=" + document.getElementsByName("search_text")[0].value;
+        var _mv = "type=search&search_type=1004" +"&s=" + document.getElementsByName("search_text")[0].value;
+        Ajax(  //Ajax(type, url, data, success, failed)
+            'get', 
+            'https://api.imjad.cn/cloudmusic/', 
+            _song, 
+            function(data){
+                data = JSON.parse(data);
+                document.getElementById("search_id").innerHTML += "  (song)id:" + data.result.songs[0].id;
+            }, 
+            function(error){
+                document.getElementById("search_id").innerHTML = "读取失败";
+        });
+        Ajax(  //Ajax(type, url, data, success, failed)
+            'get', 
+            'https://api.imjad.cn/cloudmusic/', 
+            _mv, 
+            function(data){
+                data = JSON.parse(data);
+                document.getElementById("search_id").innerHTML += "  (mv)id:" + data.result.mvs[0].id;
+            }, 
+            function(error){
+                document.getElementById("search_id").innerHTML = "读取失败";
+        });
+    }
+    function get(type){
+        document.getElementsByName("code")[0].value = "https://api.imjad.cn/cloudmusic/?type=" + document.getElementsByName("type")[0].value +"&id=" + document.getElementsByName("id")[0].value +"&br=" +  document.getElementsByName("br")[0].value;
+        var _get = "type=" + document.getElementsByName("type")[0].value +"&id=" + document.getElementsByName("id")[0].value +"&br=" +  document.getElementsByName("br")[0].value;
+        Ajax(  //Ajax(type, url, data, success, failed)
+            'get', 
+            'https://api.imjad.cn/cloudmusic/', 
+            _get, 
+            function(data){
+                var url,a,filename;
+                data = JSON.parse(data);
+                if (document.getElementsByName("type")[0].value == 'song'){
+                    //data = data.data;
+                    var url = data.data[0].url;
+                    var filename = document.getElementsByName("id")[0].value + '.mp3';
+                    if (type == 'view'){
+                        addElement(document.getElementsByClassName('tool')[0],{tagname:"audio",style:"width:100%",src:url,controls:"controls",autoplay:"autoplay"});
+                    }else if(type == 'download'){
+                        download(url,filename);
+                    }
+                }else if (document.getElementsByName("type")[0].value == 'lyric'){
+                    lyric = data.lrc.lyric;
+                    lyric = lyric.replace(/\n/g,"\r\n");
+
+                    if (type == 'view'){
+                        lyric = lyric.replace(/\r\n/g,"<br>")  
+                        //console.log(lyric);
+                        addElement(document.getElementsByClassName('tool')[0],{tagname:"div",style:"width:100%;height:500px;overflow-y:scroll",innerHTML:lyric});
+                    }else if(type == 'download'){
+                        doSave(lyric, "text/plain", document.getElementsByName("id")[0].value + ".lrc");                             
+                    }
+                    function doSave(value, type, name) {
+                        var blob;
+                        if (typeof window.Blob == "function") {
+                            blob = new Blob([value], {type: type});
+                        } else {
+                            var BlobBuilder = window.BlobBuilder || window.MozBlobBuilder || window.WebKitBlobBuilder || window.MSBlobBuilder;
+                            var bb = new BlobBuilder();
+                            bb.append(value);
+                            blob = bb.getBlob(type);
+                        }
+                        var URL = window.URL || window.webkitURL;
+                        var bloburl = URL.createObjectURL(blob);
+                        var anchor = document.createElement("a");
+                        if ('download' in anchor) {
+                            anchor.style.visibility = "hidden";
+                            anchor.href = bloburl;
+                            anchor.download = name;
+                            document.body.appendChild(anchor);
+                            var evt = document.createEvent("MouseEvents");
+                            evt.initEvent("click", true, true);
+                            anchor.dispatchEvent(evt);
+                            document.body.removeChild(anchor);
+                        } else if (navigator.msSaveBlob) {
+                            navigator.msSaveBlob(blob, name);
+                        } else {
+                            location.href = bloburl;
+                        }
+                    }
+                }else if (document.getElementsByName("type")[0].value == 'mv'){
+                    //data = data.data;
+                    var url = data.data.brs["720"];
+                    var filename = document.getElementsByName("id")[0].value + '.mp4';
+                    if (type == 'view'){
+                        addElement(document.getElementsByClassName('tool')[0],{tagname:"video",style:"max-width:100%",src:url,controls:"controls",autoplay:"autoplay"});
+                    }else if(type == 'download'){
+                        download(url,filename);
+                    }
+                }
+            }, 
+            function(error){
+                document.getElementsByClassName("tool")[0].innerHTML += "<span style=\"color:red\"><b>读取失败</b></span>";
+            });
+    }
+    function download(url,filename){
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        a.click();
+    }
+    function addElement(obj,element){
+        var parent = obj;
+        var child = document.createElement(element.tagname);
+        for (value in element){
+            child[value] = element[value];
+            //console.log(child[value]);
+        }
+        parent.appendChild(child);
+        return child;
+    }
+</script>
+<script type="text/javascript" src="https://api.imjad.cn/hitokoto/?encode=js&charset=utf-8"></script>
+<p id="hitokoto"><script>hitokoto()</script></p>
+<p class="copyright">© <script>document.write(new Date().getFullYear())</script> journey.ad</p>
+<script>
+    function Ajax(type, url, data, success, failed){
+        // 创建ajax对象
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        } else {
+            xhr = new ActiveXObject('Microsoft.XMLHTTP')
+        }
+
+        var type = type.toUpperCase();
+        // 用于清除缓存
+        var random = Math.random();
+
+        if(typeof data == 'object'){
+            var str = '';
+            for(var key in data){
+                str += key+'='+data[key]+'&';
+            }
+            data = str.replace(/&$/, '');
+        }
+
+        if(type == 'GET'){
+            if(data){
+                xhr.open('GET', url + '?' + data, true);
+            } else {
+                xhr.open('GET', url + '?t=' + random, true);
+            }
+            xhr.send();
+
+        } else if(type == 'POST'){
+            xhr.open('POST', url, true);
+            // 如果需要像 html 表单那样 POST 数据，请使用 setRequestHeader() 来添加 http 头。
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send(data);
+        }
+
+        // 处理返回数据
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){
+                if(xhr.status == 200){
+                    success(xhr.responseText);
+                } else {
+                    if(failed){
+                        failed(xhr.status);
+                    }
+                }
+            }
+        }
+    }
+
+    Ajax(  //Ajax(type, url, data, success, failed)
+        'get', 
+        'https://api.imjad.cn/cloudmusic/counter.php', 
+        '', 
+        function(data){
+            data = JSON.parse(data);
+            document.getElementById("index").innerHTML = data.index;
+            document.getElementById("api").innerHTML = data.api;
+            document.getElementById("hit").innerHTML = data.hit;
+            document.getElementById("speed").innerHTML = data.speed;
+        }, 
+        function(error){
+            var spans = document.getElementsByClassName("update")[0].getElementsByTagName("span");
+            for (var i=0;i<spans.length;i++){
+                spans[i].innerHTML = "读取失败";
+            }
+        });
+
+        function switch1(a){
+            document.getElementsByClassName("content new")[0].style.display = "block";
+            document.getElementsByClassName("content old")[0].style.display = "none";
+            a.className+=" checked";
+            document.getElementsByClassName("old")[0].className=document.getElementsByClassName("old")[0].className.replace( /(?:^|\s)checked(?!\S)/g , '' );
+        }
+        function switch2(a){
+            document.getElementsByClassName("content new")[0].style.display = "none";
+            document.getElementsByClassName("content old")[0].style.display = "block";
+            a.className+=" checked";
+            document.getElementsByClassName("new")[0].className=document.getElementsByClassName("new")[0].className.replace( /(?:^|\s)checked(?!\S)/g , '' );
+        }
+</script>
+	</body>
+	<script src="./js/smoothscroll.js"></script>
+	<script>
+	    (function(){
+    	    var forEach = function (array, callback, scope) {
+                for (var i = 0; i < array.length; i++) {
+                    callback.call(scope, i, array[i]);
+                }
+            };
+            var anchorLinks = document.querySelectorAll("a[href^='#']");
+            if (window.scrollTo) {
+                forEach(anchorLinks, function(index, element) {
+                    var target = document.getElementById(element.getAttribute("href").substring(1));
+                    element.addEventListener("click", function(el) {
+                        el.preventDefault();
+                        scrollTo({"behavior": "smooth", "top": target.offsetTop}); 
+                    })
+                });
+            }
+	    })();
+	</script>
   </body>
 </html>
