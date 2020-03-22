@@ -1,403 +1,403 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-<!--    <link rel="icon" href="../../favicon.ico">-->
-    <title>TempleData 日记</title>
-    <script src="JQ.js"></script>
-    <script src="min.js"></script>
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" href="min.css" >
-<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link href="offcanvas.css" rel="stylesheet">
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    &lt;!&ndash; The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags &ndash;&gt;-->
+<!--    <meta name="description" content="">-->
+<!--    <meta name="author" content="">-->
+<!--&lt;!&ndash;    <link rel="icon" href="../../favicon.ico">&ndash;&gt;-->
+<!--    <title>TempleData 日记</title>-->
+<!--    <script src="JQ.js"></script>-->
+<!--    <script src="min.js"></script>-->
+<!--    &lt;!&ndash; 最新版本的 Bootstrap 核心 CSS 文件 &ndash;&gt;-->
+<!--<link rel="stylesheet" href="min.css" >-->
+<!--&lt;!&ndash; 可选的 Bootstrap 主题文件（一般不用引入） &ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+<!--    &lt;!&ndash; Custom styles for this template &ndash;&gt;-->
+<!--    <link href="offcanvas.css" rel="stylesheet">-->
 
 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    -->
-  </head>
+<!--    &lt;!&ndash; HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries &ndash;&gt;-->
+<!--    &lt;!&ndash;-->
+<!--      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+<!--      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+<!--    &ndash;&gt;-->
+<!--  </head>-->
 
-  <body>
-    <nav class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">我的小肥猪</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </nav><!-- /.navbar -->
+<!--  <body>-->
+<!--    <nav class="navbar navbar-fixed-top navbar-inverse">-->
+<!--      <div class="container">-->
+<!--        <div class="navbar-header">-->
+<!--          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+<!--            <span class="sr-only">Toggle navigation</span>-->
+<!--            <span class="icon-bar"></span>-->
+<!--            <span class="icon-bar"></span>-->
+<!--            <span class="icon-bar"></span>-->
+<!--          </button>-->
+<!--          <a class="navbar-brand" href="#">我的小肥猪</a>-->
+<!--        </div>-->
+<!--        <div id="navbar" class="collapse navbar-collapse">-->
+<!--          <ul class="nav navbar-nav">-->
+<!--            <li class="active"><a href="#">Home</a></li>-->
+<!--            <li><a href="#about">About</a></li>-->
+<!--            <li><a href="#contact">Contact</a></li>-->
+<!--          </ul>-->
+<!--        </div>&lt;!&ndash; /.nav-collapse &ndash;&gt;-->
+<!--      </div>&lt;!&ndash; /.container &ndash;&gt;-->
+<!--    </nav>&lt;!&ndash; /.navbar &ndash;&gt;-->
 
-    <div class="container">
+<!--    <div class="container">-->
 
-      <div class="row row-offcanvas row-offcanvas-right">
+<!--      <div class="row row-offcanvas row-offcanvas-right">-->
 
-        <div class="col-xs-12 col-sm-9">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">日期</button>
-          </p>
-          <div class="jumbotron">
-            <h1>刘慧莹，我超喜欢你</h1>
-            <img src="img/1.jpg" style="width: 100%">
-            <p>This is an example from Tangxiao To his small pig LiuHuiYing.
+<!--        <div class="col-xs-12 col-sm-9">-->
+<!--          <p class="pull-right visible-xs">-->
+<!--            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">日期</button>-->
+<!--          </p>-->
+<!--          <div class="jumbotron">-->
+<!--            <h1>刘慧莹，我超喜欢你</h1>-->
+<!--            <img src="img/1.jpg" style="width: 100%">-->
+<!--            <p>This is an example from Tangxiao To his small pig LiuHuiYing.-->
 
-            </p>
-          </div>
+<!--            </p>-->
+<!--          </div>-->
 
-          <div class="jumbotron">
+<!--          <div class="jumbotron">-->
 
-            <h1>听歌吧</h1>
-            <div class="tool">
-              <form>
-                search:
-                <input type="text" maxlength="20" name="search_text" style="width:220px;">&nbsp;
-                <input type="button" value="搜索" onclick="search()">&nbsp;
-                <!-- result type-->
-                <span id="search_id"> </span><br>
-                type:
-                <select name="type">
-                  <option value="song" selected="selected">单曲</option>
-                  <option value="lyric">歌词</option>
-                  <option value="mv">MV</option>
-                </select>&nbsp;
-                <br>
-                id:
-                <input type="text" maxlength="10" name="id" id="songid" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" style="width:120px;">&nbsp;
-                br:
-                <select name="br">
-                  <option value="128000">128000</option>
-                  <option value="198000">198000</option>
-                  <option value="320000"  selected="selected">320000</option>
-                </select>&nbsp;
-                <input type="button" value="播放" onclick="get('view')">
-                <input type="button" value="下载" onclick="get('download')">
-              </form>
-              <p>
-                <input type="text" name="code" style="width:80%;max-width:500px;">
-              </p>
-            </div>
+<!--            <h1>听歌吧</h1>-->
+<!--            <div class="tool">-->
+<!--              <form>-->
+<!--                search:-->
+<!--                <input type="text" maxlength="20" name="search_text" style="width:220px;">&nbsp;-->
+<!--                <input type="button" value="搜索" onclick="search()">&nbsp;-->
+<!--                &lt;!&ndash; result type&ndash;&gt;-->
+<!--                <span id="search_id"> </span><br>-->
+<!--                type:-->
+<!--                <select name="type">-->
+<!--                  <option value="song" selected="selected">单曲</option>-->
+<!--                  <option value="lyric">歌词</option>-->
+<!--                  <option value="mv">MV</option>-->
+<!--                </select>&nbsp;-->
+<!--                <br>-->
+<!--                id:-->
+<!--                <input type="text" maxlength="10" name="id" id="songid" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" style="width:120px;">&nbsp;-->
+<!--                br:-->
+<!--                <select name="br">-->
+<!--                  <option value="128000">128000</option>-->
+<!--                  <option value="198000">198000</option>-->
+<!--                  <option value="320000"  selected="selected">320000</option>-->
+<!--                </select>&nbsp;-->
+<!--                <input type="button" value="播放" onclick="get('view')">-->
+<!--                <input type="button" value="下载" onclick="get('download')">-->
+<!--              </form>-->
+<!--              <p>-->
+<!--                <input type="text" name="code" style="width:80%;max-width:500px;">-->
+<!--              </p>-->
+<!--            </div>-->
 
-          </div>
-          <div class="row">
-            <div class="col-xs-6 col-lg-4">
-              <h2>2020/3/19</h2>
-              <img src="img/2.jpg" style="width: 100%">
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-          </div><!--/row-->
-        </div><!--/.col-xs-12.col-sm-9-->
+<!--          </div>-->
+<!--          <div class="row">-->
+<!--            <div class="col-xs-6 col-lg-4">-->
+<!--              <h2>2020/3/19</h2>-->
+<!--              <img src="img/2.jpg" style="width: 100%">-->
+<!--              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+<!--              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+<!--            </div>&lt;!&ndash;/.col-xs-6.col-lg-4&ndash;&gt;-->
+<!--            <div class="col-xs-6 col-lg-4">-->
+<!--              <h2>Heading</h2>-->
+<!--              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+<!--              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+<!--            </div>&lt;!&ndash;/.col-xs-6.col-lg-4&ndash;&gt;-->
+<!--            <div class="col-xs-6 col-lg-4">-->
+<!--              <h2>Heading</h2>-->
+<!--              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+<!--              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+<!--            </div>&lt;!&ndash;/.col-xs-6.col-lg-4&ndash;&gt;-->
+<!--            <div class="col-xs-6 col-lg-4">-->
+<!--              <h2>Heading</h2>-->
+<!--              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+<!--              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+<!--            </div>&lt;!&ndash;/.col-xs-6.col-lg-4&ndash;&gt;-->
+<!--            <div class="col-xs-6 col-lg-4">-->
+<!--              <h2>Heading</h2>-->
+<!--              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+<!--              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+<!--            </div>&lt;!&ndash;/.col-xs-6.col-lg-4&ndash;&gt;-->
+<!--            <div class="col-xs-6 col-lg-4">-->
+<!--              <h2>Heading</h2>-->
+<!--              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+<!--              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+<!--            </div>&lt;!&ndash;/.col-xs-6.col-lg-4&ndash;&gt;-->
+<!--          </div>&lt;!&ndash;/row&ndash;&gt;-->
+<!--        </div>&lt;!&ndash;/.col-xs-12.col-sm-9&ndash;&gt;-->
 
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">一月份的爱你</a>
-            <a href="#" class="list-group-item">二月份的爱你</a>
-            <a href="#" class="list-group-item">三月份的爱你</a>
-            <a href="#" class="list-group-item">四月份的爱你</a>
-            <a href="#" class="list-group-item">五月份的爱你</a>
-            <a href="#" class="list-group-item">六月份的爱你</a>
-            <a href="#" class="list-group-item">七月份的爱你</a>
-            <a href="#" class="list-group-item">八月份的爱你</a>
-            <a href="#" class="list-group-item">九月份的爱你</a>
-            <a href="#" class="list-group-item">十月份的爱你</a>
-            <a href="#" class="list-group-item">十一月份的爱你</a>
-            <a href="#" class="list-group-item">十二月份的爱你</a>
-          </div>
-        </div><!--/.sidebar-offcanvas-->
-      </div><!--/row-->
+<!--        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">-->
+<!--          <div class="list-group">-->
+<!--            <a href="#" class="list-group-item active">一月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">二月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">三月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">四月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">五月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">六月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">七月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">八月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">九月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">十月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">十一月份的爱你</a>-->
+<!--            <a href="#" class="list-group-item">十二月份的爱你</a>-->
+<!--          </div>-->
+<!--        </div>&lt;!&ndash;/.sidebar-offcanvas&ndash;&gt;-->
+<!--      </div>&lt;!&ndash;/row&ndash;&gt;-->
 
-      <hr>
+<!--      <hr>-->
 
-      <footer>
-        <p>&copy; 2020 Company, Inc.</p>
-      </footer>
+<!--      <footer>-->
+<!--        <p>&copy; 2020 Company, Inc.</p>-->
+<!--      </footer>-->
 
-    </div><!--/.container-->
+<!--    </div>&lt;!&ndash;/.container&ndash;&gt;-->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="offcanvas.js"></script>
+<!--    &lt;!&ndash; Bootstrap core JavaScript-->
+<!--    ================================================== &ndash;&gt;-->
+<!--    &lt;!&ndash; Placed at the end of the document so the pages load faster &ndash;&gt;-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<!--    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
+<!--    <script src="../../dist/js/bootstrap.min.js"></script>-->
+<!--    &lt;!&ndash; IE10 viewport hack for Surface/desktop Windows 8 bug &ndash;&gt;-->
+<!--    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+<!--    <script src="offcanvas.js"></script>-->
 
-    <script>
+<!--    <script>-->
 
-      function search(){
-        document.getElementById("search_id").innerHTML = "";
-        var _song = "type=search" +"&s=" + document.getElementsByName("search_text")[0].value;
-        var _mv = "type=search&search_type=1004" +"&s=" + document.getElementsByName("search_text")[0].value;
-        Ajax(  //Ajax(type, url, data, success, failed)
-                'get',
-                'https://api.imjad.cn/cloudmusic/',
-                _song,
-                function(data){
-                  data = JSON.parse(data);
-                  //document.getElementById("search_id").innerHTML += "  (song)id:" + data.result.songs[0].id;
-                  document.getElementById("songid").value= data.result.songs[0].id
-                  //document.getElementsByName("id").value= data.result.songs[0].id
-                },
-                function(error){
-                  document.getElementById("search_id").innerHTML = "读取失败";
-                });
-        Ajax(  //Ajax(type, url, data, success, failed)
-                'get',
-                'https://api.imjad.cn/cloudmusic/',
-                _mv,
-                function(data){
-                  data = JSON.parse(data);
-                  document.getElementById("search_id").innerHTML += "  (mv)id:" + data.result.mvs[0].id;
-                },
-                function(error){
-                  document.getElementById("search_id").innerHTML = "读取失败";
-                });
-      }
+<!--      function search(){-->
+<!--        document.getElementById("search_id").innerHTML = "";-->
+<!--        var _song = "type=search" +"&s=" + document.getElementsByName("search_text")[0].value;-->
+<!--        var _mv = "type=search&search_type=1004" +"&s=" + document.getElementsByName("search_text")[0].value;-->
+<!--        Ajax(  //Ajax(type, url, data, success, failed)-->
+<!--                'get',-->
+<!--                'https://api.imjad.cn/cloudmusic/',-->
+<!--                _song,-->
+<!--                function(data){-->
+<!--                  data = JSON.parse(data);-->
+<!--                  //document.getElementById("search_id").innerHTML += "  (song)id:" + data.result.songs[0].id;-->
+<!--                  document.getElementById("songid").value= data.result.songs[0].id-->
+<!--                  //document.getElementsByName("id").value= data.result.songs[0].id-->
+<!--                },-->
+<!--                function(error){-->
+<!--                  document.getElementById("search_id").innerHTML = "读取失败";-->
+<!--                });-->
+<!--        Ajax(  //Ajax(type, url, data, success, failed)-->
+<!--                'get',-->
+<!--                'https://api.imjad.cn/cloudmusic/',-->
+<!--                _mv,-->
+<!--                function(data){-->
+<!--                  data = JSON.parse(data);-->
+<!--                  document.getElementById("search_id").innerHTML += "  (mv)id:" + data.result.mvs[0].id;-->
+<!--                },-->
+<!--                function(error){-->
+<!--                  document.getElementById("search_id").innerHTML = "读取失败";-->
+<!--                });-->
+<!--      }-->
 
-      function get(type){
-        document.getElementsByName("code")[0].value = "https://api.imjad.cn/cloudmusic/?type=" + document.getElementsByName("type")[0].value +"&id=" + document.getElementsByName("id")[0].value +"&br=" +  document.getElementsByName("br")[0].value;
-        var _get = "type=" + document.getElementsByName("type")[0].value +"&id=" + document.getElementsByName("id")[0].value +"&br=" +  document.getElementsByName("br")[0].value;
-        Ajax(  //Ajax(type, url, data, success, failed)
-            'get',
-            'https://api.imjad.cn/cloudmusic/',
-            _get,
-            function(data){
-                var url,a,filename;
-                data = JSON.parse(data);
-                if (document.getElementsByName("type")[0].value == 'song'){
-                    //data = data.data;
-                    var url = data.data[0].url;
-                    var filename = document.getElementsByName("id")[0].value + '.mp3';
-                    if (type == 'view'){
-                        addElement(document.getElementsByClassName('tool')[0],{tagname:"audio",style:"width:100%",src:url,controls:"controls",autoplay:"autoplay"});
-                    }else if(type == 'download'){
-                        download(url,filename);
-                    }
-                }else if (document.getElementsByName("type")[0].value == 'lyric'){
-                    lyric = data.lrc.lyric;
-                    lyric = lyric.replace(/\n/g,"\r\n");
+<!--      function get(type){-->
+<!--        document.getElementsByName("code")[0].value = "https://api.imjad.cn/cloudmusic/?type=" + document.getElementsByName("type")[0].value +"&id=" + document.getElementsByName("id")[0].value +"&br=" +  document.getElementsByName("br")[0].value;-->
+<!--        var _get = "type=" + document.getElementsByName("type")[0].value +"&id=" + document.getElementsByName("id")[0].value +"&br=" +  document.getElementsByName("br")[0].value;-->
+<!--        Ajax(  //Ajax(type, url, data, success, failed)-->
+<!--            'get',-->
+<!--            'https://api.imjad.cn/cloudmusic/',-->
+<!--            _get,-->
+<!--            function(data){-->
+<!--                var url,a,filename;-->
+<!--                data = JSON.parse(data);-->
+<!--                if (document.getElementsByName("type")[0].value == 'song'){-->
+<!--                    //data = data.data;-->
+<!--                    var url = data.data[0].url;-->
+<!--                    var filename = document.getElementsByName("id")[0].value + '.mp3';-->
+<!--                    if (type == 'view'){-->
+<!--                        addElement(document.getElementsByClassName('tool')[0],{tagname:"audio",style:"width:100%",src:url,controls:"controls",autoplay:"autoplay"});-->
+<!--                    }else if(type == 'download'){-->
+<!--                        download(url,filename);-->
+<!--                    }-->
+<!--                }else if (document.getElementsByName("type")[0].value == 'lyric'){-->
+<!--                    lyric = data.lrc.lyric;-->
+<!--                    lyric = lyric.replace(/\n/g,"\r\n");-->
 
-                    if (type == 'view'){
-                        lyric = lyric.replace(/\r\n/g,"<br>")
-                        //console.log(lyric);
-                        addElement(document.getElementsByClassName('tool')[0],{tagname:"div",style:"width:100%;height:500px;overflow-y:scroll",innerHTML:lyric});
-                    }else if(type == 'download'){
-                        doSave(lyric, "text/plain", document.getElementsByName("id")[0].value + ".lrc");
-                    }
-                    function doSave(value, type, name) {
-                        var blob;
-                        if (typeof window.Blob == "function") {
-                            blob = new Blob([value], {type: type});
-                        } else {
-                            var BlobBuilder = window.BlobBuilder || window.MozBlobBuilder || window.WebKitBlobBuilder || window.MSBlobBuilder;
-                            var bb = new BlobBuilder();
-                            bb.append(value);
-                            blob = bb.getBlob(type);
-                        }
-                        var URL = window.URL || window.webkitURL;
-                        var bloburl = URL.createObjectURL(blob);
-                        var anchor = document.createElement("a");
-                        if ('download' in anchor) {
-                            anchor.style.visibility = "hidden";
-                            anchor.href = bloburl;
-                            anchor.download = name;
-                            document.body.appendChild(anchor);
-                            var evt = document.createEvent("MouseEvents");
-                            evt.initEvent("click", true, true);
-                            anchor.dispatchEvent(evt);
-                            document.body.removeChild(anchor);
-                        } else if (navigator.msSaveBlob) {
-                            navigator.msSaveBlob(blob, name);
-                        } else {
-                            location.href = bloburl;
-                        }
-                    }
-                }else if (document.getElementsByName("type")[0].value == 'mv'){
-                    //data = data.data;
-                    var url = data.data.brs["720"];
-                    var filename = document.getElementsByName("id")[0].value + '.mp4';
-                    if (type == 'view'){
-                        addElement(document.getElementsByClassName('tool')[0],{tagname:"video",style:"max-width:100%",src:url,controls:"controls",autoplay:"autoplay"});
-                    }else if(type == 'download'){
-                        download(url,filename);
-                    }
-                }
-            },
-            function(error){
-                document.getElementsByClassName("tool")[0].innerHTML += "<span style=\"color:red\"><b>读取失败</b></span>";
-            });
-    }
-    function download(url,filename){
-        var a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        a.click();
-    }
-    function addElement(obj,element){
-        var parent = obj;
-        var child = document.createElement(element.tagname);
-        for (value in element){
-            child[value] = element[value];
-            //console.log(child[value]);
-        }
-        parent.appendChild(child);
-        return child;
-    }
-</script>
-<script type="text/javascript" src="https://api.imjad.cn/hitokoto/?encode=js&charset=utf-8"></script>
-<p id="hitokoto"><script>hitokoto()</script></p>
-<p class="copyright">© <script>document.write(new Date().getFullYear())</script> journey.ad</p>
-<script>
-    function Ajax(type, url, data, success, failed){
-        // 创建ajax对象
-        var xhr = null;
-        if(window.XMLHttpRequest){
-            xhr = new XMLHttpRequest();
-        } else {
-            xhr = new ActiveXObject('Microsoft.XMLHTTP')
-        }
+<!--                    if (type == 'view'){-->
+<!--                        lyric = lyric.replace(/\r\n/g,"<br>")-->
+<!--                        //console.log(lyric);-->
+<!--                        addElement(document.getElementsByClassName('tool')[0],{tagname:"div",style:"width:100%;height:500px;overflow-y:scroll",innerHTML:lyric});-->
+<!--                    }else if(type == 'download'){-->
+<!--                        doSave(lyric, "text/plain", document.getElementsByName("id")[0].value + ".lrc");-->
+<!--                    }-->
+<!--                    function doSave(value, type, name) {-->
+<!--                        var blob;-->
+<!--                        if (typeof window.Blob == "function") {-->
+<!--                            blob = new Blob([value], {type: type});-->
+<!--                        } else {-->
+<!--                            var BlobBuilder = window.BlobBuilder || window.MozBlobBuilder || window.WebKitBlobBuilder || window.MSBlobBuilder;-->
+<!--                            var bb = new BlobBuilder();-->
+<!--                            bb.append(value);-->
+<!--                            blob = bb.getBlob(type);-->
+<!--                        }-->
+<!--                        var URL = window.URL || window.webkitURL;-->
+<!--                        var bloburl = URL.createObjectURL(blob);-->
+<!--                        var anchor = document.createElement("a");-->
+<!--                        if ('download' in anchor) {-->
+<!--                            anchor.style.visibility = "hidden";-->
+<!--                            anchor.href = bloburl;-->
+<!--                            anchor.download = name;-->
+<!--                            document.body.appendChild(anchor);-->
+<!--                            var evt = document.createEvent("MouseEvents");-->
+<!--                            evt.initEvent("click", true, true);-->
+<!--                            anchor.dispatchEvent(evt);-->
+<!--                            document.body.removeChild(anchor);-->
+<!--                        } else if (navigator.msSaveBlob) {-->
+<!--                            navigator.msSaveBlob(blob, name);-->
+<!--                        } else {-->
+<!--                            location.href = bloburl;-->
+<!--                        }-->
+<!--                    }-->
+<!--                }else if (document.getElementsByName("type")[0].value == 'mv'){-->
+<!--                    //data = data.data;-->
+<!--                    var url = data.data.brs["720"];-->
+<!--                    var filename = document.getElementsByName("id")[0].value + '.mp4';-->
+<!--                    if (type == 'view'){-->
+<!--                        addElement(document.getElementsByClassName('tool')[0],{tagname:"video",style:"max-width:100%",src:url,controls:"controls",autoplay:"autoplay"});-->
+<!--                    }else if(type == 'download'){-->
+<!--                        download(url,filename);-->
+<!--                    }-->
+<!--                }-->
+<!--            },-->
+<!--            function(error){-->
+<!--                document.getElementsByClassName("tool")[0].innerHTML += "<span style=\"color:red\"><b>读取失败</b></span>";-->
+<!--            });-->
+<!--    }-->
+<!--    function download(url,filename){-->
+<!--        var a = document.createElement('a');-->
+<!--        a.href = url;-->
+<!--        a.download = filename;-->
+<!--        a.click();-->
+<!--    }-->
+<!--    function addElement(obj,element){-->
+<!--        var parent = obj;-->
+<!--        var child = document.createElement(element.tagname);-->
+<!--        for (value in element){-->
+<!--            child[value] = element[value];-->
+<!--            //console.log(child[value]);-->
+<!--        }-->
+<!--        parent.appendChild(child);-->
+<!--        return child;-->
+<!--    }-->
+<!--</script>-->
+<!--<script type="text/javascript" src="https://api.imjad.cn/hitokoto/?encode=js&charset=utf-8"></script>-->
+<!--<p id="hitokoto"><script>hitokoto()</script></p>-->
+<!--<p class="copyright">© <script>document.write(new Date().getFullYear())</script> journey.ad</p>-->
+<!--<script>-->
+<!--    function Ajax(type, url, data, success, failed){-->
+<!--        // 创建ajax对象-->
+<!--        var xhr = null;-->
+<!--        if(window.XMLHttpRequest){-->
+<!--            xhr = new XMLHttpRequest();-->
+<!--        } else {-->
+<!--            xhr = new ActiveXObject('Microsoft.XMLHTTP')-->
+<!--        }-->
 
-        var type = type.toUpperCase();
-        // 用于清除缓存
-        var random = Math.random();
+<!--        var type = type.toUpperCase();-->
+<!--        // 用于清除缓存-->
+<!--        var random = Math.random();-->
 
-        if(typeof data == 'object'){
-            var str = '';
-            for(var key in data){
-                str += key+'='+data[key]+'&';
-            }
-            data = str.replace(/&$/, '');
-        }
+<!--        if(typeof data == 'object'){-->
+<!--            var str = '';-->
+<!--            for(var key in data){-->
+<!--                str += key+'='+data[key]+'&';-->
+<!--            }-->
+<!--            data = str.replace(/&$/, '');-->
+<!--        }-->
 
-        if(type == 'GET'){
-            if(data){
-                xhr.open('GET', url + '?' + data, true);
-            } else {
-                xhr.open('GET', url + '?t=' + random, true);
-            }
-            xhr.send();
+<!--        if(type == 'GET'){-->
+<!--            if(data){-->
+<!--                xhr.open('GET', url + '?' + data, true);-->
+<!--            } else {-->
+<!--                xhr.open('GET', url + '?t=' + random, true);-->
+<!--            }-->
+<!--            xhr.send();-->
 
-        } else if(type == 'POST'){
-            xhr.open('POST', url, true);
-            // 如果需要像 html 表单那样 POST 数据，请使用 setRequestHeader() 来添加 http 头。
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhr.send(data);
-        }
+<!--        } else if(type == 'POST'){-->
+<!--            xhr.open('POST', url, true);-->
+<!--            // 如果需要像 html 表单那样 POST 数据，请使用 setRequestHeader() 来添加 http 头。-->
+<!--            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");-->
+<!--            xhr.send(data);-->
+<!--        }-->
 
-        // 处理返回数据
-        xhr.onreadystatechange = function(){
-            if(xhr.readyState == 4){
-                if(xhr.status == 200){
-                    success(xhr.responseText);
-                } else {
-                    if(failed){
-                        failed(xhr.status);
-                    }
-                }
-            }
-        }
-    }
+<!--        // 处理返回数据-->
+<!--        xhr.onreadystatechange = function(){-->
+<!--            if(xhr.readyState == 4){-->
+<!--                if(xhr.status == 200){-->
+<!--                    success(xhr.responseText);-->
+<!--                } else {-->
+<!--                    if(failed){-->
+<!--                        failed(xhr.status);-->
+<!--                    }-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
 
-    Ajax(  //Ajax(type, url, data, success, failed)
-        'get',
-        'https://api.imjad.cn/cloudmusic/counter.php',
-        '',
-        function(data){
-            data = JSON.parse(data);
-            document.getElementById("index").innerHTML = data.index;
-            document.getElementById("api").innerHTML = data.api;
-            document.getElementById("hit").innerHTML = data.hit;
-            document.getElementById("speed").innerHTML = data.speed;
-        },
-        function(error){
-            var spans = document.getElementsByClassName("update")[0].getElementsByTagName("span");
-            for (var i=0;i<spans.length;i++){
-                spans[i].innerHTML = "读取失败";
-            }
-        });
+<!--    Ajax(  //Ajax(type, url, data, success, failed)-->
+<!--        'get',-->
+<!--        'https://api.imjad.cn/cloudmusic/counter.php',-->
+<!--        '',-->
+<!--        function(data){-->
+<!--            data = JSON.parse(data);-->
+<!--            document.getElementById("index").innerHTML = data.index;-->
+<!--            document.getElementById("api").innerHTML = data.api;-->
+<!--            document.getElementById("hit").innerHTML = data.hit;-->
+<!--            document.getElementById("speed").innerHTML = data.speed;-->
+<!--        },-->
+<!--        function(error){-->
+<!--            var spans = document.getElementsByClassName("update")[0].getElementsByTagName("span");-->
+<!--            for (var i=0;i<spans.length;i++){-->
+<!--                spans[i].innerHTML = "读取失败";-->
+<!--            }-->
+<!--        });-->
 
-        function switch1(a){
-            document.getElementsByClassName("content new")[0].style.display = "block";
-            document.getElementsByClassName("content old")[0].style.display = "none";
-            a.className+=" checked";
-            document.getElementsByClassName("old")[0].className=document.getElementsByClassName("old")[0].className.replace( /(?:^|\s)checked(?!\S)/g , '' );
-        }
-        function switch2(a){
-            document.getElementsByClassName("content new")[0].style.display = "none";
-            document.getElementsByClassName("content old")[0].style.display = "block";
-            a.className+=" checked";
-            document.getElementsByClassName("new")[0].className=document.getElementsByClassName("new")[0].className.replace( /(?:^|\s)checked(?!\S)/g , '' );
-        }
-</script>
-	</body>
-	<script src="./js/smoothscroll.js"></script>
-	<script>
-	    (function(){
-    	    var forEach = function (array, callback, scope) {
-                for (var i = 0; i < array.length; i++) {
-                    callback.call(scope, i, array[i]);
-                }
-            };
-            var anchorLinks = document.querySelectorAll("a[href^='#']");
-            if (window.scrollTo) {
-                forEach(anchorLinks, function(index, element) {
-                    var target = document.getElementById(element.getAttribute("href").substring(1));
-                    element.addEventListener("click", function(el) {
-                        el.preventDefault();
-                        scrollTo({"behavior": "smooth", "top": target.offsetTop});
-                    })
-                });
-            }
-	    })();
-	</script>
-  </body>
-</html>
+<!--        function switch1(a){-->
+<!--            document.getElementsByClassName("content new")[0].style.display = "block";-->
+<!--            document.getElementsByClassName("content old")[0].style.display = "none";-->
+<!--            a.className+=" checked";-->
+<!--            document.getElementsByClassName("old")[0].className=document.getElementsByClassName("old")[0].className.replace( /(?:^|\s)checked(?!\S)/g , '' );-->
+<!--        }-->
+<!--        function switch2(a){-->
+<!--            document.getElementsByClassName("content new")[0].style.display = "none";-->
+<!--            document.getElementsByClassName("content old")[0].style.display = "block";-->
+<!--            a.className+=" checked";-->
+<!--            document.getElementsByClassName("new")[0].className=document.getElementsByClassName("new")[0].className.replace( /(?:^|\s)checked(?!\S)/g , '' );-->
+<!--        }-->
+<!--</script>-->
+<!--	</body>-->
+<!--	<script src="./js/smoothscroll.js"></script>-->
+<!--	<script>-->
+<!--	    (function(){-->
+<!--    	    var forEach = function (array, callback, scope) {-->
+<!--                for (var i = 0; i < array.length; i++) {-->
+<!--                    callback.call(scope, i, array[i]);-->
+<!--                }-->
+<!--            };-->
+<!--            var anchorLinks = document.querySelectorAll("a[href^='#']");-->
+<!--            if (window.scrollTo) {-->
+<!--                forEach(anchorLinks, function(index, element) {-->
+<!--                    var target = document.getElementById(element.getAttribute("href").substring(1));-->
+<!--                    element.addEventListener("click", function(el) {-->
+<!--                        el.preventDefault();-->
+<!--                        scrollTo({"behavior": "smooth", "top": target.offsetTop});-->
+<!--                    })-->
+<!--                });-->
+<!--            }-->
+<!--	    })();-->
+<!--	</script>-->
+<!--  </body>-->
+<!--</html>-->
